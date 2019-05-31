@@ -1,0 +1,13 @@
+package com.qa.bae.CucumberTest;
+
+import org.junit.runner.RunWith;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = "C:\\Users\\Administrator\\eclipse-workspace\\CucumberProject\\src\\test\\java\\TeaTesting.feature", glue = {"com.qa.bae.cucumberglue"})
+
+public class Runner {
+
+}

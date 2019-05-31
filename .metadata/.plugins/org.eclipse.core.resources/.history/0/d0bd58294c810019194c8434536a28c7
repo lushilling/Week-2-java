@@ -1,0 +1,20 @@
+package com.qa.bae.blackjack;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.qa.blackjack.BlackJack;
+
+public class UnitTests {
+	static BlackJack blackjack;
+	@BeforeClass
+	public static void init() {
+		blackjack = new BlackJack();
+	}
+	@Test
+	public void test1() {
+		assertEquals (0 , blackjack.play(0,0));
+	}
+}

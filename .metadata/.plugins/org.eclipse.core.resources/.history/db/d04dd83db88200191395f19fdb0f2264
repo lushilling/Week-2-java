@@ -1,0 +1,6 @@
+
+public class Constants {
+	
+	public static final String URL = "http://thedemosite.co.uk/"
+
+}

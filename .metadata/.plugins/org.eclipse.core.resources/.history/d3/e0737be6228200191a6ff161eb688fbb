@@ -1,0 +1,57 @@
+package com.qa.bae.Task2Test;
+
+import org.junit.BeforeClass;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Task2Test {
+	
+	public static WebDriver driver;
+	public static String url = "http://automationpractice.com/index.php";
+
+	@BeforeClass
+	public static void setup() {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Administrator\\Downloads\\chromedriver_win32/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+
+	@Test
+	public void task2Test() {
+		driver.manage().
+	}
+	
+
+////
+////	@BeforeClass
+//	public static void setup() {
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Users\\Administrator\\Downloads\\chromedriver_win32/chromedriver.exe");
+//		driver = new ChromeDriver();
+//	}
+
+//	@Test
+//	public void test1() throws InterruptedException {
+//		driver.manage().window().maximize();
+//		driver.get(url);
+//
+//		WebElement findElement = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div/div[1]/div/div[1]/input"));
+//		findElement.sendKeys("kitten");
+//		findElement.sendKeys(Keys.ENTER);
+//
+//		WebElement imageElement = driver.findElement(By.linkText("Images"));
+//		imageElement.click();
+//
+//		driver.findElement(By.partialLinkText("cute")).click();
+//
+//		Thread.sleep(2000);
+//	}
+//
+//	@AfterClass
+//	public static void teardown() {
+//		driver.quit();
+//	}
+
+
+}

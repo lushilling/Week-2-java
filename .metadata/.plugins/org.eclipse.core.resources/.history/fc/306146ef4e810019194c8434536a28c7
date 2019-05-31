@@ -1,0 +1,16 @@
+package com.qa.blackjack;
+
+public class BlackJack {
+	public static void main(String[] args) {
+		
+	}
+	
+	public int play(int player, int dealer) {
+		
+		if (dealer>player) {
+			return dealer;
+			
+		}
+		else	return player;
+	}
+}

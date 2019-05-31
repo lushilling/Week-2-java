@@ -1,0 +1,106 @@
+package com.qa.bae.ApacheTest;
+
+import static org.junit.Assert.*;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.qa.bae.Apache.Constant;
+
+public class ApacheTest {
+	public static WebDriver driver;
+	public static XSSFWorkbook workbook;
+	public static XSSFSheet sheet;
+
+	@BeforeClass
+	public static void setup() {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Administrator\\Downloads\\chromedriver_win32/chromedriver.exe");
+		driver = new ChromeDriver();
+
+		FileInputStream file = null;
+		try {
+			file = new FileInputStream(Constant.Path_TestData + Constant.File_TestData);
+		} catch (FileNotFoundException e) {
+		}
+
+		try {
+			workbook = new XSSFWorkbook(file);
+		} catch (IOException e) {
+			System.out.print("File not saved");
+		}
+
+	}
+
+	@Test
+	public void test1() {
+		driver.manage().window().maximize();
+		driver.get(Constant.URL);
+		sheet = workbook.getSheetAt(0);
+
+		for (int i = 1; i < 5; i++) {
+
+			XSSFCell username = sheet.getRow(i).getCell(0);
+			XSSFCell password = sheet.getRow(i).getCell(1);
+
+			// Add user
+			WebElement addUser = driver.findElement(By
+					.xpath("/html/body/div/center/table/tbody/tr[2]/td/div/center/table/tbody/tr/td[2]/p/small/a[3]"));
+			addUser.click();
+			driver.findElement(By.name("username")).sendKeys(username.getStringCellValue());
+			driver.findElement(By.name("password")).sendKeys(password.getStringCellValue());
+			driver.findElement(By.name("FormsButton2")).click();
+
+			// Login user
+			driver.findElement(
+					By.xpath("/html/body/div/center/table/tbody/tr[2]/td/div/center/table/tbody/tr/td[2]/p/small/a[4]"))
+					.click();
+			driver.findElement(By.name("username")).sendKeys(username.getStringCellValue());
+			driver.findElement(By.name("password")).sendKeys(password.getStringCellValue());
+			driver.findElement(By.name("FormsButton2")).click();
+
+			// Test Successful login
+			WebElement loginResult = driver
+					.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b"));
+			assertEquals("**Successful Login**", loginResult.getText());
+			System.out.println(loginResult.getText());
+
+			sheet.getRow(i).createCell(2);
+
+			XSSFCell result = sheet.getRow(i).getCell(2);
+
+			result.setCellValue(loginResult.getText());
+			System.out.println("success");
+
+			FileOutputStream out = null;
+			try {
+				out = new FileOutputStream(Constant.Path_TestData + Constant.File_TestData);
+				workbook.write(out);
+				out.close();
+			} catch (IOException e) {
+				System.out.print("File not saved");
+			}
+
+		}
+
+	}
+
+	@AfterClass
+	public static void teardown() {
+		driver.quit();
+	}
+
+}

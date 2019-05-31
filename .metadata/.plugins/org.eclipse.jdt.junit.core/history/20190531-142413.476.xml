@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CucumberProject" project="CucumberProject" tests="14" started="14" failures="8" errors="2" ignored="0">
+  <testsuite name="com.qa.bae.CucumberTest.ParametisationTest">
+    <testcase name="initializationError" classname="com.qa.bae.CucumberTest.ParametisationTest" incomplete="true"/>
+    <testcase name="initializationError" classname="com.qa.bae.CucumberTest.ParametisationTest" time="0.0">
+      <error>java.lang.Exception: Method i_go_to_website should have no parameters&#13;
+	at org.junit.runners.model.FrameworkMethod.validatePublicVoidNoArg(FrameworkMethod.java:76)&#13;
+	at org.junit.runners.ParentRunner.validatePublicVoidNoArgMethods(ParentRunner.java:155)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.validateTestMethods(BlockJUnit4ClassRunner.java:208)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.validateInstanceMethods(BlockJUnit4ClassRunner.java:188)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.collectInitializationErrors(BlockJUnit4ClassRunner.java:128)&#13;
+	at org.junit.runners.ParentRunner.validate(ParentRunner.java:416)&#13;
+	at org.junit.runners.ParentRunner.&lt;init&gt;(ParentRunner.java:84)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.&lt;init&gt;(BlockJUnit4ClassRunner.java:65)&#13;
+	at org.junit.internal.builders.JUnit4Builder.runnerForClass(JUnit4Builder.java:10)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:33)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createUnfilteredTest(JUnit4TestLoader.java:84)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createTest(JUnit4TestLoader.java:70)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.loadTests(JUnit4TestLoader.java:43)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:444)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+java.lang.Exception: Method i_search_for should have no parameters&#13;
+	at org.junit.runners.model.FrameworkMethod.validatePublicVoidNoArg(FrameworkMethod.java:76)&#13;
+	at org.junit.runners.ParentRunner.validatePublicVoidNoArgMethods(ParentRunner.java:155)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.validateTestMethods(BlockJUnit4ClassRunner.java:208)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.validateInstanceMethods(BlockJUnit4ClassRunner.java:188)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.collectInitializationErrors(BlockJUnit4ClassRunner.java:128)&#13;
+	at org.junit.runners.ParentRunner.validate(ParentRunner.java:416)&#13;
+	at org.junit.runners.ParentRunner.&lt;init&gt;(ParentRunner.java:84)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.&lt;init&gt;(BlockJUnit4ClassRunner.java:65)&#13;
+	at org.junit.internal.builders.JUnit4Builder.runnerForClass(JUnit4Builder.java:10)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:33)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createUnfilteredTest(JUnit4TestLoader.java:84)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createTest(JUnit4TestLoader.java:70)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.loadTests(JUnit4TestLoader.java:43)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:444)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.qa.bae.CucumberTest.Runner" time="29.899">
+    <testsuite name="Feature: Searching for terms" time="29.899">
+      <testsuite name="Scenario Outline: Search bing for google" time="29.899">
+        <testsuite name="Examples:" time="29.899">
+          <testsuite name="| https://www.bing.com | QAConsulting |" time="1.075" incomplete="true">
+            <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:86)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:52)&#13;
+	at com.qa.bae.CucumberTest.ParametisationTest.i_am_taken_to_a_list_of_data_for_that_search(ParametisationTest.java:50)&#13;
+	at ✽.Then I am taken to a list of data for that search(C:/Users/Administrator/eclipse-workspace/CucumberProject/src/test/java/com/qa/bae/CucumberTest/Parametisation.feature:9)&#13;
+&#13;
+</failure>
+            <testcase name="Given I go to &quot;https://www.bing.com&quot; website" classname="| https://www.bing.com | QAConsulting |" time="1.065"/>
+            <testcase name="When I search for &quot;QAConsulting&quot;" classname="| https://www.bing.com | QAConsulting |" time="0.008"/>
+            <testcase name="Then I am taken to a list of data for that search" classname="| https://www.bing.com | QAConsulting |" time="0.001">
+              <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:86)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:52)&#13;
+	at com.qa.bae.CucumberTest.ParametisationTest.i_am_taken_to_a_list_of_data_for_that_search(ParametisationTest.java:50)&#13;
+	at ✽.Then I am taken to a list of data for that search(C:/Users/Administrator/eclipse-workspace/CucumberProject/src/test/java/com/qa/bae/CucumberTest/Parametisation.feature:9)&#13;
+&#13;
+</failure>
+            </testcase>
+          </testsuite>
+          <testsuite name="| https://www.bing.com | Guru99 |" time="0.977" incomplete="true">
+            <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:86)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:52)&#13;
+	at com.qa.bae.CucumberTest.ParametisationTest.i_am_taken_to_a_list_of_data_for_that_search(ParametisationTest.java:50)&#13;
+	at ✽.Then I am taken to a list of data for that search(C:/Users/Administrator/eclipse-workspace/CucumberProject/src/test/java/com/qa/bae/CucumberTest/Parametisation.feature:9)&#13;
+&#13;
+</failure>
+            <testcase name="Given I go to &quot;https://www.bing.com&quot; website" classname="| https://www.bing.com | Guru99 |" time="0.934"/>
+            <testcase name="When I search for &quot;Guru99&quot;" classname="| https://www.bing.com | Guru99 |" time="0.043"/>
+            <testcase name="Then I am taken to a list of data for that search" classname="| https://www.bing.com | Guru99 |" time="0.0">
+              <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:86)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:52)&#13;
+	at com.qa.bae.CucumberTest.ParametisationTest.i_am_taken_to_a_list_of_data_for_that_search(ParametisationTest.java:50)&#13;
+	at ✽.Then I am taken to a list of data for that search(C:/Users/Administrator/eclipse-workspace/CucumberProject/src/test/java/com/qa/bae/CucumberTest/Parametisation.feature:9)&#13;
+&#13;
+</failure>
+            </testcase>
+          </testsuite>
+          <testsuite name="| https://www.bing.com | BlazeDemo |" time="0.652" incomplete="true">
+            <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:86)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:52)&#13;
+	at com.qa.bae.CucumberTest.ParametisationTest.i_am_taken_to_a_list_of_data_for_that_search(ParametisationTest.java:50)&#13;
+	at ✽.Then I am taken to a list of data for that search(C:/Users/Administrator/eclipse-workspace/CucumberProject/src/test/java/com/qa/bae/CucumberTest/Parametisation.feature:9)&#13;
+&#13;
+</failure>
+            <testcase name="Given I go to &quot;https://www.bing.com&quot; website" classname="| https://www.bing.com | BlazeDemo |" time="0.647"/>
+            <testcase name="When I search for &quot;BlazeDemo&quot;" classname="| https://www.bing.com | BlazeDemo |" time="0.005"/>
+            <testcase name="Then I am taken to a list of data for that search" classname="| https://www.bing.com | BlazeDemo |" time="0.0">
+              <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:86)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:52)&#13;
+	at com.qa.bae.CucumberTest.ParametisationTest.i_am_taken_to_a_list_of_data_for_that_search(ParametisationTest.java:50)&#13;
+	at ✽.Then I am taken to a list of data for that search(C:/Users/Administrator/eclipse-workspace/CucumberProject/src/test/java/com/qa/bae/CucumberTest/Parametisation.feature:9)&#13;
+&#13;
+</failure>
+            </testcase>
+          </testsuite>
+          <testsuite name="| https://www.bing.com | Automated Testing |" time="0.837" incomplete="true">
+            <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:86)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:52)&#13;
+	at com.qa.bae.CucumberTest.ParametisationTest.i_am_taken_to_a_list_of_data_for_that_search(ParametisationTest.java:50)&#13;
+	at ✽.Then I am taken to a list of data for that search(C:/Users/Administrator/eclipse-workspace/CucumberProject/src/test/java/com/qa/bae/CucumberTest/Parametisation.feature:9)&#13;
+&#13;
+</failure>
+            <testcase name="Given I go to &quot;https://www.bing.com&quot; website" classname="| https://www.bing.com | Automated Testing |" time="0.806"/>
+            <testcase name="When I search for &quot;Automated Testing&quot;" classname="| https://www.bing.com | Automated Testing |" time="0.031"/>
+            <testcase name="Then I am taken to a list of data for that search" classname="| https://www.bing.com | Automated Testing |" time="0.0">
+              <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:86)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:41)&#13;
+	at org.junit.Assert.assertTrue(Assert.java:52)&#13;
+	at com.qa.bae.CucumberTest.ParametisationTest.i_am_taken_to_a_list_of_data_for_that_search(ParametisationTest.java:50)&#13;
+	at ✽.Then I am taken to a list of data for that search(C:/Users/Administrator/eclipse-workspace/CucumberProject/src/test/java/com/qa/bae/CucumberTest/Parametisation.feature:9)&#13;
+&#13;
+</failure>
+            </testcase>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,65 @@
+package com.qa.bae.Task3Test;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Task3Test {
+
+	public static WebDriver driver;
+	public static String url = "https://www.phptravels.net/";
+
+	@BeforeClass
+	public static void setup() {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Administrator\\Downloads\\chromedriver_win32/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+
+	@Test
+	public void task3Test() throws InterruptedException {
+		driver.manage().window().maximize();
+		driver.get(url);
+
+		// location
+		WebElement location = driver.findElement(By.xpath("//*[@id=\"s2id_autogen3\"]/a/span[1]"));
+		location.click();
+		location.sendKeys("London", Keys.ENTER);
+//		WebElement myDynamicElement = (new WebDriverWait(driver, 10))
+//				.until(ExpectedConditions.visibilityOfElementLocated(By.name("London")));
+////
+//		// check-in date
+		WebElement checkIn = driver.findElement(By.xpath("//*[@id=\"dpd1\"]/div/input"));
+		checkIn.click();
+		checkIn.sendKeys("05/06/2019", Keys.ENTER);
+//		WebElement checkindate = (new WebDriverWait(driver, 10))
+//				.until(ExpectedConditions.visibilityOfElementLocated(By.name("05/06/2019")));
+		
+//		// checkout date
+		WebElement checkOut = driver.findElement(By.xpath("//*[@id=\"dpd2\"]/div/input"));
+		checkOut.click();
+		checkOut.sendKeys("07/06/2019", Keys.ENTER);
+//		WebElement checkoutdate = (new WebDriverWait(driver, 10))
+//				.until(ExpectedConditions.visibilityOfElementLocated(By.name("07/06/2019")));
+//
+//		// search
+//		driver.findElement(By.xpath("//*[@id=\"hotels\"]/form/div[5]/button")).click();
+
+		Thread.sleep(4000);
+
+	}
+
+	@AfterClass
+	public static void teardown() {
+		driver.quit();
+	}
+
+}

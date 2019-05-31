@@ -1,0 +1,24 @@
+package com.qa.bae.Task1Test;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class Task1Test {
+
+	@BeforeClass
+	public static void setup() {
+		
+	}
+	@Test
+	public void testTast1() throws InterruptedException {
+		
+		
+		
+		Thread.sleep(2000);
+	}
+	@AfterClass
+	public static void teardown() {
+//		driver.quit();
+	}
+}

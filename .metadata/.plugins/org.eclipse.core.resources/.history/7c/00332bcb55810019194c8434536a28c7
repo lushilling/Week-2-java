@@ -1,0 +1,36 @@
+package com.qa.blackjack;
+
+import java.util.Random;
+
+public class BlackJack {
+	public static void main(String[] args) {
+		
+	}
+	
+	public int play(int player, int dealer) {
+		if(player< 31 && dealer < 31) {
+			if (player > dealer && player<=21) {
+				return player;
+			}
+			else if (dealer<= 21) {
+				return dealer;
+			}
+		
+			}
+			else return 0;
+		}
+		
+		else return -1;
+	}
+	
+	public int twist(int dealer) {
+		Random random = new Random();
+		int twist = random.nextInt(11);
+		if (twist == 11) {
+			return 1;
+		}
+		int newDealer = dealer +twist;
+		return newDealer;
+		
+	}
+}

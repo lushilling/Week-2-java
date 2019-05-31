@@ -1,0 +1,43 @@
+package com.qa.bae.CucumberTest;
+
+public class ParametisationTest {
+
+//	public static WebDriver driver;
+//
+//	@Before
+//	public static void setup() {
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Users\\Administrator\\Downloads\\chromedriver_win32/chromedriver.exe");
+//		driver = new ChromeDriver();
+//		driver.manage().window().maximize();
+//	}
+//
+//	@Test
+//	@Given("^I go to \"([^\"]*)\" website$")
+//	public void i_go_to_website(String arg1) {
+//		// Write code here that turns the phrase above into concrete actions
+//		driver.get(arg1);
+//	}
+//
+//	@Test
+//	@When("^I search for \"([^\"]*)\"$")
+//	public void i_search_for(String arg1) {
+//		// Write code here that turns the phrase above into concrete actions
+////		WebElement search = driver.findElement(By.xpath("//*[@id=\"sb_form_q\"]"));
+////		search.click();
+////		search.sendKeys(Keys.chord(arg1, Keys.ENTER));
+//
+//	}
+//
+//	@Test
+//	@Then("^I am taken to a list of data for that search$")
+//	public void i_am_taken_to_a_list_of_data_for_that_search() {
+//		// Write code here that turns the phrase above into concrete actions
+//
+//	}
+//
+//	@After
+//	public static void teardown() {
+//		driver.quit();
+//	}
+}

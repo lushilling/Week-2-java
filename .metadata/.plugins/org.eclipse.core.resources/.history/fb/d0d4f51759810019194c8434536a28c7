@@ -1,0 +1,14 @@
+package com.qa.bae.blackjack;
+
+import org.junit.BeforeClass;
+
+import com.qa.blackjack.BlackJack;
+
+public class UnitTestsTwist {
+	static BlackJack blackjack;
+	@BeforeClass
+	public static void setup() {
+		blackjack = new BlackJack();
+	}
+
+}
